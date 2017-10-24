@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Anki add-on</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello World!</h1>
+      <br>
+        <form action="/attribute_list" method="post">
+          <fieldset>
+            <legend>Pick what info to include on the card</legend>
+            <div>
+              <label for="definitions">Definitions</label>
+              <input type = "checkbox" checked id = "definitions" name="definitions"/>
+            </div>
+            <div>
+              <label for="examples">Examples</label>
+              <input type = "checkbox" id = "examples" name="examples"/>
+            </div>
+            <div>
+              <label for="related_words">Related words</label>
+              <input type = "checkbox" id = "related_words" name="rel_words"/>
+            </div>
+            <div>
+              <label for="pronunciation">Pronunciation</label>
+              <input type = "checkbox" id = "pronunciation" name="pronunciations"/>
+            </div>
+            <div>
+              <label for="hyphenation">Hyphenation</label>
+              <input type = "checkbox" id = "hyphenation" name="hyphenation"/>
+            </div>
+            <div>
+              <label for="frequency">Frequency</label>
+              <input type = "checkbox" id = "frequency" name="frequency"/>
+            </div>
+            <div>
+              <label for="audio">Audio</label>
+              <input type = "checkbox" id = "audio" name="audio"/>
+            </div>
+            <div>
+                  <label for="dictionary">
+                      <span>Choose a Dictionary</span>
+                  </label>
+                  <select id="dictionary" name="source_dict">
+                      <option value="wiktionary" selected>Wiktionary</option>
+                      <option value="webster">Webster</option>
+                      <option value="century">Century</option>
+                      <option value="ahd">AHD</option>
+                      <option value="wordnet">WordNet</option>
+                      <option value="all">All</option>
+                  </select>
+            </div>
+            <div>
+              <input type="text" placeholder="type a word to lookup here" name="word" required>
+              <button type="submit">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+    </div>
+  </body>
+</html>

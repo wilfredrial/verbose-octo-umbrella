@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>List of Word Attributes</title>
+    </head>
+   <body>
+      <form action="/well_done" method="post">
+          {% for key, value in result.items() %}
+              <fieldset>
+                  <legend> {{key}} </legend>
+                  {% for item in value %}
+                      <div>
+                          <input type = "checkbox" id = '{{key}}_{{loop.index}}' name='{{key}}_{{loop.index}}'/>
+                          <label for='{{key}}_{{loop.index}}'>{{ item }}</label>
+                      </div>
+                  {% endfor %}
+              </fieldset>
+          {% endfor %}
+          <div>
+             <button type="submit">Submit</button>
+          </div>
+      </form>
+   </body>
+</html>
